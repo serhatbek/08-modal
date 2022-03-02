@@ -26,7 +26,15 @@ main {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  @include flexBox(row, center, center);
+  @include flexBox(column, center, center);
+
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    letter-spacing: 7px;
+    color: #fae2ce;
+  }
 }
 
 .cta {
@@ -39,11 +47,29 @@ main {
   margin: 0 1rem;
   padding: 0.8rem;
   text-align: center;
+  box-shadow: 0 4px 18px #000;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-image: url(../images/monsters-team.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &:hover &__title {
+    opacity: 0;
+  }
+
+  &:hover &__btn {
+    box-shadow: inset 0 0px 12px #000, 0 6px 18px #000;
+  }
 
   &__title {
     font-family: 'Chelsea Market', cursive;
     font-size: 4rem;
     margin-bottom: 1rem;
+    transition: all 300ms ease;
   }
 
   &__btn {
@@ -59,11 +85,69 @@ main {
 
     &:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 18px #000;
     }
 
     &:active {
       transform: translateY(0);
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  color: #fae2ce;
+
+  &.active {
+    @include flexBox(row, center, center);
+  }
+
+  &__container {
+    position: absolute;
+    max-width: 30rem;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background-color: #b25327;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    @include flexBox(column, center, center);
+  }
+
+  &__img {
+    max-width: 20rem;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__close {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fae2ce;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px #000;
+    @include flexBox(row, center, center);
+    transition: all 200ms ease;
+
+    .bx-x-circle {
+      font-size: 2rem;
+      color: #b25327;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
     }
   }
 }
