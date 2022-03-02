@@ -6,13 +6,19 @@
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html --no-source-maps"
   },
+  "browserslist": ">0.25%, last 2 versions, not dead",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2",
     "postcss-preset-env": "^7.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.4.2"
+  }
 }
