@@ -67,7 +67,7 @@ main {
 
   &__title {
     font-family: 'Chelsea Market', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     transition: all 300ms ease;
   }
@@ -102,6 +102,7 @@ main {
   bottom: 0;
   background-color: rgba($color: #000000, $alpha: 0.8);
   color: #fae2ce;
+  transition: all 200ms ease;
 
   &.active {
     @include flexBox(row, center, center);
