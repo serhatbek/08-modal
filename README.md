@@ -18,10 +18,10 @@ JS Modal is a small Vanilla JS project to get better at JavaScript DOM manipulat
 - On hover to button card remove title and show bg image of monsters
 - Select scare now button
 - Add event listener to button
-- On active state, display modal
+- On click button, display modal
 - Select close modal button
 - Add event listener to button
-- On active state, close modal
+- On click button, close modal
 
 ## Live
 
